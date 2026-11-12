@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5A3A22">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="مواعيد سهل">
+  <title>مواعيد السيلز · سهل</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" id="topbar" hidden>
+    <a class="brand" href="#/"><span class="brand-mark">س</span><span class="brand-text">مواعيد السيلز</span></a>
+    <nav>
+      <a href="#/new" class="btn btn-primary btn-sm">+ اجتماع جديد</a>
+      <a href="#/settings" class="navlink">الإعدادات</a>
+    </nav>
+  </header>
+  <div id="push-banner" class="push-banner" hidden>
+    <span id="push-banner-text">فعّل الإشعارات على الجهاز ده عشان التذكيرات توصلك حتى لو الموقع مقفول.</span>
+    <button id="push-banner-btn" class="btn btn-sm btn-blue">فعّل الإشعارات</button>
+  </div>
+  <main class="container" id="app">
+    <div class="loading">جاري التحميل...</div>
+  </main>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
