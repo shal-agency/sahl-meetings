@@ -169,6 +169,7 @@ select cron.schedule(
       url     := 'https://bhwdzhkxpvlvkeuzljzh.supabase.co/functions/v1/send-reminders',
       headers := jsonb_build_object(
                    'Content-Type', 'application/json',
+                   'apikey', 'sb_publishable_tLHq-KOMhpzrS7WihNSlyw_-Yd-oNfl',   -- مفتاح عام (نفس اللي في config.js)
                    'x-cron-secret', (select value from public.app_settings where key = 'cron_secret')),
       body    := '{}'::jsonb,
       timeout_milliseconds := 20000)
